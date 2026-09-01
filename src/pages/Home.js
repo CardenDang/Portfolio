@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+import "../styles/Home.css";
+
 function Home() {
     return (
         <main className="home">
-            <div className ="banner">
-                 <h1 className="main-title">
+            <div className="banner">
+                <h1 className="main-title">
                     CD
                 </h1>
 
@@ -26,9 +29,6 @@ function Home() {
                     contacts
                 </Link>
             </div>
-           
-
-
         </main>
     );
 }

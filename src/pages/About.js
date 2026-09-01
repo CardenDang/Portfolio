@@ -1,6 +1,8 @@
 function About() {
     return(
-
+        <div>
+            Hi
+        </div>
     );
 }
 
