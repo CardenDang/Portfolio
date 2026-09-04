@@ -14,10 +14,6 @@ function Home() {
                 </h1>
 
                 <div className="homepage-btns">
-                    <Link to="/about" className="about-btn">
-                        about
-                    </Link>
-
                     <Link to="/experience" className="experience-btn">
                         experience
                     </Link>
@@ -67,37 +63,68 @@ function Home() {
                             Aug 2024 - Aug 2028
                         </p>
                     </div>
+
+                    <details className="education-dropdown">
+                        <summary>Details</summary>
+
+                        <div className="education-details">
+                            <p>
+                                <strong>GPA:</strong> 3.50
+                            </p>
+                            <p>
+                                <strong>Relevant Coursework:</strong> Data Structures & Algorithms
+                            </p>
+                            <p>
+                                <strong>Extracurriculars:</strong> Club Tennis
+                            </p>
+                        </div>
+                    </details>
                 </div>
             </section>
 
             <section className="featured-work">
-                <h2>
+                <h2 className="featured-title">
                     Featured Work
                 </h2>
 
                 <div className="projects-grid">
                     <article className="ibm-card">
-                        <img
-                            src={ibm}
-                            alt="AI Personal Financial Advisor project"
-                            className="ibm-photo"
-                        />
-
-                        <div className="project-info">
+                        <div className="project-info1">
                             <h3>
                                 AI Personal Financial Advisor
                             </h3>
                             <p>
-                                blah blah blah
+                                IBM watsonX multi-agent system geared towards guiding users in making informed investment decisions.
                             </p>
                         </div>
                     </article>
 
                     <article className="resume-card">
+                        <div className="project-info2"> 
+                            <h3>
+                                SharkAI Resume Reviewer
+                            </h3>
 
+                            <p>
+                                Amazon Bedrock AI automatically extracts and analyzes resumes; can filter through keywords and provide suggestions under secure AWS cloud. 
+                            </p>
+                        </div> 
+                    </article>
 
+                    <article className="sjbay-card">
+                        <div className="project-info3">
+                            <h4>
+                                SJSU Marketplace
+                            </h4>
+
+                            <p>
+                                Buyer and seller marketplace created by SJSU students for SJSU students.
+                            </p>
+                        </div>
                     </article>
                 </div>
+
+
             </section>
         </main>
     );

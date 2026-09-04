@@ -155,6 +155,7 @@
     background-color: white;
     color: #03049c;
     font-family: "Geo", serif;
+    padding-bottom: 200px;
     
     align-items: center;
 }
@@ -168,7 +169,7 @@
 .overview-desc {
     width: min(85%, 550px);
     margin: 10% auto 0;
-    padding: 40px;
+    padding: 100px;
     background-color: #03049c;
     border-radius: 24px;
     box-sizing: border-box;
@@ -176,6 +177,40 @@
 }
 .overview-desc:hover {
     background-color: #030383;
+}
+
+.education-dropdown {
+    width:100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.4); /* solid white line */
+    text-align: left;
+    color:white; /* More Info. color*/
+    margin-top: 50px;
+}
+
+.education-dropdown summary {
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: 600;
+  list-style-position: outside;
+}
+
+.education-dropdown summary:hover {
+  color: rgb(221, 215, 215);
+}
+
+.education-details {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.education-details p {
+  margin: 12px 0;
 }
 
 .college-title {
@@ -198,6 +233,10 @@
     margin-top: 5%;
 }
 
+.featured-title {
+    font-size: 50px;
+}
+
 .ibm-photo {
     width: min(90%, 700px);
     height: auto;
@@ -212,4 +251,35 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.projects-grid {
+    /* To make project cards side-by-side*/
+    /* display: flex */
+    /* flex-direction: row*/
+    margin-top: 5%;
+}
+
+.ibm_card {
+    flex-direction: column;
+}
+
+.project-info1 {
+    font-size: 30px;
+    margin-top: 10%;
+}
+
+.resume_card {
+    flex-direction: column;
+}
+
+.project-info2 {
+    font-size: 30px;
+    margin-top: 10%;
+}
+
+.project-info3 { 
+    font-size: 30px;
+    margin-top: 10%;
+    margin-bottom: 200px;
 }
