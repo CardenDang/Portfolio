@@ -4,6 +4,7 @@ import CDlogo from "../assets/logo_cd_silver_transparent.png";
 import me from "../assets/me_circular.png";
 import ibm from "../assets/ibm.png";
 import sjbay from "../assets/sjbay.png";
+import { motion } from "motion/react"
 
 function Home() {
     return (
@@ -36,9 +37,11 @@ function Home() {
                 </div>
             </div>
             <section className="mainpage">
-                <img
+                <motion.img 
                     src={me}
                     className="me-photo"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                 />
                 <div className="intro-text">
                     <h1 className="title">
