@@ -15,6 +15,10 @@ function Home() {
                 </h1>
 
                 <div className="homepage-btns">
+                    <a href="https://drive.google.com/file/d/1YiVLqwxrqPLXyCWEL7XU_5X2phths53U/view?usp=sharing" target="_blank" className="resume-btn">
+                        resume
+                    </a>
+
                     <Link to="/experience" className="experience-btn">
                         experience
                     </Link>

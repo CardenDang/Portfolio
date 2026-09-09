@@ -49,6 +49,15 @@
     margin-left: auto;
 }
 
+.resume-btn {
+    text-decoration: none;
+    color: white;
+}
+
+.resume-btn:hover {
+    color: rgb(221, 215, 215);
+}
+
 .about-btn {
     text-decoration: none;
     color: white;
