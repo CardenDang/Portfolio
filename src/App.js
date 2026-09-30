@@ -4,12 +4,14 @@ import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contacts from "./pages/Contacts";
+import SiteHeader from "./components/SiteHeader";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
+      <SiteHeader />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

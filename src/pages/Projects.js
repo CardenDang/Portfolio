@@ -1,17 +1,7 @@
-import { Link } from "react-router-dom";
+import PageLayout from "../components/PageLayout";
 
 function Projects() {
-    return(
-        <div className="projects-style">
-            <p className="projects-caption">
-                HI
-            </p>
-
-            <Link to="/" className="backhome-btn">
-                Home
-            </Link>
-        </div>
-    );
+    return <PageLayout title="Projects" />;
 }
 
 export default Projects;

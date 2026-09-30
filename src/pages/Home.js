@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "../styles/styling.css";
 import CDlogo from "../assets/logo_cd_silver_transparent.png";
 import me from "../assets/me_circular.png";
@@ -6,36 +5,10 @@ import ibm from "../assets/ibm.png";
 import sjbay from "../assets/sjbay.png";
 import { motion } from "motion/react"
 
+
 function Home() {
     return (
         <main className="home">
-            <div className="banner">
-                <h1 className="CD">
-                    CD
-                </h1>
-
-                <div className="homepage-btns">
-                    <a href="https://drive.google.com/file/d/1YiVLqwxrqPLXyCWEL7XU_5X2phths53U/view?usp=sharing" target="_blank" className="resume-btn">
-                        resume
-                    </a>
-
-                    <Link to="/experience" className="experience-btn">
-                        experience
-                    </Link>
-
-                    <Link to="/projects" className="projects-btn">
-                        projects
-                    </Link>
-
-                    <Link to="/skills" className="skills-btn">
-                        skills
-                    </Link>
-
-                    <Link to="/contacts" className="contacts-btn">
-                        contacts
-                    </Link>
-                </div>
-            </div>
             <section className="mainpage">
                 <motion.img 
                     src={me}
@@ -58,6 +31,7 @@ function Home() {
                     Education
                 </h1>
 
+                <div className="education-cards">
                 <div className="overview-desc"> 
                     <div className="sjsu">
                        <p className="college-title">
@@ -82,10 +56,23 @@ function Home() {
                                 <strong>Relevant Coursework:</strong> Data Structures & Algorithms
                             </p>
                             <p>
-                                <strong>Extracurriculars:</strong> Club Tennis
+                                <strong>Extracurriculars:</strong> Club Tennis, Vietnamese Student Association
                             </p>
                         </div>
                     </details>
+                </div>
+                <article className="overview-desc skillsbuild-card" aria-labelledby="skillsbuild-title">
+                    <h2 id="skillsbuild-title" className="college-title">
+                        IBM SkillsBuild AI Learning Lab
+                    </h2>
+                    <p className="college-desc">Program courses</p>
+                    <ul className="skillsbuild-courses">
+                        <li>Enterprise Thinking Practitioner</li>
+                        <li>Make Agentic AI Work for You</li>
+                        <li>Introduction to Retrieval Augmented Generation</li>
+                        <li>Unleashing the Power of AI Agents</li>
+                    </ul>
+                </article>
                 </div>
             </section>
 
@@ -126,6 +113,18 @@ function Home() {
 
                             <p>
                                 Buyer and seller marketplace created by SJSU students for SJSU students.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article className="sleepqualitymonitor-card">
+                        <div className="project-info3">
+                            <h5>
+                                Sleep Quality Monitor
+                            </h5>
+
+                            <p>
+                                Monitors conditions important to quality of sleep. Data is combined with Machine Learning model to optimize sleeping conditions.
                             </p>
                         </div>
                     </article>

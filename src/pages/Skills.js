@@ -1,17 +1,7 @@
-import { Link } from "react-router-dom";
+import PageLayout from "../components/PageLayout";
 
 function Skills() {
-    return(
-        <div className="skills-style">
-            <p className="skills-caption">
-                HI
-            </p>
-
-            <Link to="/" className="backhome-btn">
-                Home
-            </Link>
-        </div>
-    );
+    return <PageLayout title="Skills" />;
 }
 
 export default Skills;
