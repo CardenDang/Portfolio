@@ -53,7 +53,7 @@ function Home() {
                                 <strong>GPA:</strong> 3.50
                             </p>
                             <p>
-                                <strong>Relevant Coursework:</strong> Data Structures & Algorithms
+                                <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Programming in Java, Database Management Systems, Software Engineering Process Management
                             </p>
                             <p>
                                 <strong>Extracurriculars:</strong> Club Tennis, Vietnamese Student Association
