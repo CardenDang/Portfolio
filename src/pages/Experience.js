@@ -6,6 +6,16 @@ import jambaLogo from "../assets/jamba.svg";
 
 const experiences = [
     {
+        id: "ibm",
+        title: "AI Extern",
+        company: "IBM",
+        dates: "Feb 2026 - May 2026",
+        location: "Remote",
+        skills: ["IBM watsonx", "Retrieval-Augmented Generation (RAG)"],
+        logo: ibmLogo,
+        description: "Collaborated with 3 IBM mentors while acting as the Project Manager in a semester long-externship. We designed and developed an AI-powered financial advisory platform using IBM watsonx technologies to deliver a project over 10 weeks. I applied concepts from the IBM SkillsBuild Learning Plan including Retrieval-Augmented Generation (RAG), agentic workflows, and multi-agent architectures. ",
+    },
+    {
         id: "usta",
         title: "Tournament Director & Volunteer",
         company: "(USTA) United States Tennis Association",
@@ -15,16 +25,6 @@ const experiences = [
         skills: ["Project Management", "Event Planning"],
         logo: ustaLogo,
         description: "I organize and manage USTA-sanctioned tennis tournaments serving 100+ players across various age groups. These tournaments are held at different tournament sites siumultaneously. My responsibilities also include coordinating scheduling, staffing, and player logitstics. In addition, I act as a Court Monitor resolving on-court disputes while enforcing USTA rules to ensure fair tournament play.",
-    },
-    {
-        id: "ibm",
-        title: "AI Extern",
-        company: "IBM",
-        dates: "Feb 2026 - May 2026",
-        location: "Remote",
-        skills: ["IBM watsonx", "Retrieval-Augmented Generation (RAG)"],
-        logo: ibmLogo,
-        description: "Collaborated with 3 IBM mentors while acting as the Project Manager in a semester long-externship. We designed and developed an AI-powered financial advisory platform using IBM watsonx technologies to deliver a project over 10 weeks. I applied concepts from the IBM SkillsBuild Learning Plan including Retrieval-Augmented Generation (RAG), agentic workflows, and multi-agent architectures. ",
     },
     {
         id: "starbucks",

@@ -191,10 +191,10 @@
 .education-cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 48px;
+    gap: 100px;
     width: min(85%, 1150px);
     margin: 64px auto 0;
-    align-items: start;
+    align-items: stretch;
 }
 
 .education-cards .overview-desc {
@@ -208,13 +208,10 @@
     margin-top: 0;
 }
 
-.education-cards .overview-desc:not(.skillsbuild-card) {
-    align-self: stretch;
-}
-
 @media (max-width: 760px) {
     .education-cards {
         grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
     }
 
 }
@@ -236,29 +233,12 @@
     margin-top: 16px;
 }
 
-.education-dropdown {
-    width:100%;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 2px solid rgba(255, 255, 255, 0.4); /* solid white line */
-    text-align: left;
-    color:white; /* More Info. color*/
-    margin-top: 50px;
-}
-
-.education-dropdown summary {
-  cursor: pointer;
-  font-size: 19px;
-  font-weight: 600;
-  list-style-position: outside;
-}
-
-.education-dropdown summary:hover {
-  color: rgb(221, 215, 215);
-}
-
 .education-details {
-  margin-top: 20px;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  text-align: left;
+  color: white;
   font-size: 16px;
   line-height: 1.5;
 
@@ -396,6 +376,53 @@
     border-radius: 24px;
     background: white;
     color: #03049c;
+}
+
+.technical-skills-title {
+    margin: 48px 0 28px;
+    font-size: 36px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+}
+
+.skill-card {
+    padding: clamp(24px, 4vw, 36px);
+    border-radius: 24px;
+    background: white;
+    color: #03049c;
+}
+
+.skill-card h3 {
+    margin: 0 0 24px;
+    font-size: clamp(26px, 3vw, 34px);
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skill-list li {
+    padding: 8px 14px;
+    border-radius: 16px;
+    background: #eeeeff;
+    font-size: 20px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .featured-projects-title {

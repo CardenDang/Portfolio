@@ -1,8 +1,5 @@
 import "../styles/styling.css";
-import CDlogo from "../assets/logo_cd_silver_transparent.png";
 import me from "../assets/me_circular.png";
-import ibm from "../assets/ibm.png";
-import sjbay from "../assets/sjbay.png";
 import { motion } from "motion/react"
 
 
@@ -45,9 +42,6 @@ function Home() {
                         </p>
                     </div>
 
-                    <details className="education-dropdown">
-                        <summary>Details</summary>
-
                         <div className="education-details">
                             <p>
                                 <strong>GPA:</strong> 3.50
@@ -59,7 +53,6 @@ function Home() {
                                 <strong>Extracurriculars:</strong> Club Tennis, Vietnamese Student Association
                             </p>
                         </div>
-                    </details>
                 </div>
                 <article className="overview-desc skillsbuild-card" aria-labelledby="skillsbuild-title">
                     <h2 id="skillsbuild-title" className="college-title">
