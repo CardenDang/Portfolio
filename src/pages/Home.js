@@ -3,6 +3,29 @@ import me from "../assets/me_circular.png";
 import { motion } from "motion/react"
 
 
+const projects = [
+    {
+        id: "financial-advisor",
+        title: "AI Personal Financial Advisor",
+        description: "IBM watsonX multi-agent system geared towards guiding users in making informed investment decisions.",
+    },
+    {
+        id: "sharkai",
+        title: "SharkAI Resume Reviewer",
+        description: "Amazon Bedrock AI automatically extracts and analyzes resumes; can filter through keywords and provide suggestions under secure AWS cloud.",
+    },
+    {
+        id: "sjsu-marketplace",
+        title: "SJSU Marketplace",
+        description: "Buyer and seller marketplace created by SJSU students for SJSU students.",
+    },
+    {
+        id: "sleep-quality",
+        title: "Sleep Quality Monitor",
+        description: "Monitors conditions important to quality of sleep. Data is combined with a Machine Learning model to optimize sleeping conditions.",
+    },
+];
+
 function Home() {
     return (
         <main className="home">
@@ -74,56 +97,19 @@ function Home() {
                     Featured Work
                 </h2>
 
-                <div className="projects-grid">
-                    <article className="ibm-card">
-                        <div className="project-info1">
-                            <h3>
-                                AI Personal Financial Advisor
-                            </h3>
-                            <p>
-                                IBM watsonX multi-agent system geared towards guiding users in making informed investment decisions.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article className="resume-card">
-                        <div className="project-info2"> 
-                            <h3>
-                                SharkAI Resume Reviewer
-                            </h3>
-
-                            <p>
-                                Amazon Bedrock AI automatically extracts and analyzes resumes; can filter through keywords and provide suggestions under secure AWS cloud. 
-                            </p>
-                        </div> 
-                    </article>
-
-                    <article className="sjbay-card">
-                        <div className="project-info3">
-                            <h4>
-                                SJSU Marketplace
-                            </h4>
-
-                            <p>
-                                Buyer and seller marketplace created by SJSU students for SJSU students.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article className="sleepqualitymonitor-card">
-                        <div className="project-info3">
-                            <h5>
-                                Sleep Quality Monitor
-                            </h5>
-
-                            <p>
-                                Monitors conditions important to quality of sleep. Data is combined with Machine Learning model to optimize sleeping conditions.
-                            </p>
-                        </div>
-                    </article>
+                <div className="featured-projects-grid">
+                    {projects.map(project => (
+                        <article className="featured-project-card" key={project.id} aria-labelledby={`${project.id}-title`}>
+                            <div className="project-image-placeholder" aria-label={`Image placeholder for ${project.title}`}>
+                                <span>Project image coming soon</span>
+                            </div>
+                            <div className="featured-project-details">
+                                <h3 id={`${project.id}-title`}>{project.title}</h3>
+                                <p>{project.description}</p>
+                            </div>
+                        </article>
+                    ))}
                 </div>
-
-
             </section>
         </main>
     );
