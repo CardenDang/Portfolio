@@ -170,7 +170,7 @@
 }
 
 .overview-title {
-    font-size: 50px;
+    font-size: 70px;
     color:#03049C;
     margin-top: 5%;
 }
@@ -192,20 +192,31 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 100px;
-    width: min(85%, 1150px);
+    width: min(calc(90% - 28.8px), 1328.5px);
     margin: 64px auto 0;
+    margin-top: 5%;
     align-items: stretch;
 }
 
 .education-cards .overview-desc {
     width: 100%;
     min-width: 0;
+    min-height: 700px;
     margin: 0;
-    padding: clamp(24px, 6vw, 64px);
+    padding: clamp(32px, 7vw, 84px) clamp(24px, 6vw, 64px);
 }
 
 .education-cards .college-title {
     margin-top: 0;
+    font-size: clamp(40px, 4vw, 52px);
+}
+
+.education-cards .college-desc {
+    font-size: clamp(28px, 2.5vw, 32px);
+}
+
+.education-cards .college-date {
+    font-size: 26px;
 }
 
 @media (max-width: 760px) {
@@ -221,11 +232,16 @@
     font-weight: 400;
 }
 
+.skillsbuild-card .college-desc {
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.4);
+}
+
 .skillsbuild-courses {
     padding-left: 24px;
     color: white;
     text-align: left;
-    font-size: 20px;
+    font-size: 26px;
     line-height: 1.5;
 }
 
@@ -239,7 +255,7 @@
   border-top: 2px solid rgba(255, 255, 255, 0.4);
   text-align: left;
   color: white;
-  font-size: 16px;
+  font-size: 21px;
   line-height: 1.5;
 
   display: flex;
@@ -268,12 +284,12 @@
 .featured-work {
     font-family: "Geo", serif;
     margin-top: 5%;
-    width: 56.4%;
+    width: 44%;
     padding-bottom: 100px;
 }
 
 .featured-title {
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .ibm-photo {
@@ -441,18 +457,32 @@
 .featured-project-card {
     display: flex;
     flex-direction: column;
-    min-height: 45vh;
+    min-height: 27vh;
     overflow: hidden;
     border-radius: 24px;
     background-color: white;
     color: #03049c;
+    margin-top: 5%;
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(3, 4, 156, 0.2);
+}
+
+.featured-project-card[aria-labelledby="sjsu-marketplace-title"] .project-image {
+    aspect-ratio: 678 / 597.6;
+    object-fit: cover;
+    object-position: top;
 }
 
 .project-image-placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: clamp(144px, 27vh, 336px);
+    min-height: clamp(86px, 16.2vh, 202px);
     padding: 24px;
     box-sizing: border-box;
     background-color: #eeeeff;
@@ -462,7 +492,7 @@
 }
 
 .featured-project-details {
-    padding: clamp(17px, 3vw, 43px);
+    padding: clamp(10px, 1.8vw, 26px);
     text-align: left;
 }
 
@@ -479,7 +509,7 @@
 
 @media (max-width: 760px) {
     .featured-work {
-        width: 90%;
+        width: 70.2%;
     }
 
     .featured-projects-grid {

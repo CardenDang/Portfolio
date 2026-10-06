@@ -1,5 +1,9 @@
 import "../styles/styling.css";
 import me from "../assets/me_circular.png";
+import financialAdvisor from "../assets/financial-advisor.png";
+import sharkai from "../assets/sharkai.png";
+import sleepQuality from "../assets/sleep-quality.png";
+import marketplace from "../assets/marketplace.png";
 import { motion } from "motion/react"
 
 
@@ -7,21 +11,29 @@ const projects = [
     {
         id: "financial-advisor",
         title: "AI Personal Financial Advisor",
+        image: financialAdvisor,
+        imageAlt: "AI Personal Financial Advisor interface with portfolio holdings and an investment advisory chat",
         description: "IBM watsonX multi-agent system geared towards guiding users in making informed investment decisions.",
     },
     {
         id: "sharkai",
         title: "SharkAI Resume Reviewer",
+        image: sharkai,
+        imageAlt: "SharkAI Resume Reviewer interface with a resume upload form",
         description: "Amazon Bedrock AI automatically extracts and analyzes resumes; can filter through keywords and provide suggestions under secure AWS cloud.",
     },
     {
         id: "sjsu-marketplace",
         title: "SJSU Marketplace",
+        image: marketplace,
+        imageAlt: "SJ-Bay student marketplace with product filters and listings for a pen, room rental, and textbook",
         description: "Buyer and seller marketplace created by SJSU students for SJSU students.",
     },
     {
         id: "sleep-quality",
         title: "Sleep Quality Monitor",
+        image: sleepQuality,
+        imageAlt: "Sleep Quality Monitor dashboard with sleep scores, duration, efficiency, and heart rate charts",
         description: "Monitors conditions important to quality of sleep. Data is combined with a Machine Learning model to optimize sleeping conditions.",
     },
 ];
@@ -100,9 +112,18 @@ function Home() {
                 <div className="featured-projects-grid">
                     {projects.map(project => (
                         <article className="featured-project-card" key={project.id} aria-labelledby={`${project.id}-title`}>
-                            <div className="project-image-placeholder" aria-label={`Image placeholder for ${project.title}`}>
-                                <span>Project image coming soon</span>
-                            </div>
+                            {project.image ? (
+                                <img
+                                    className="project-image"
+                                    src={project.image}
+                                    alt={project.imageAlt}
+                                    loading="lazy"
+                                />
+                            ) : (
+                                <div className="project-image-placeholder" aria-label={`Image placeholder for ${project.title}`}>
+                                    <span>Project image coming soon</span>
+                                </div>
+                            )}
                             <div className="featured-project-details">
                                 <h3 id={`${project.id}-title`}>{project.title}</h3>
                                 <p>{project.description}</p>
