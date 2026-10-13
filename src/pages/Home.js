@@ -1,42 +1,12 @@
 import "../styles/styling.css";
 import me from "../assets/me_circular.png";
-import financialAdvisor from "../assets/financial-advisor.png";
-import sharkai from "../assets/sharkai.png";
-import sleepQuality from "../assets/sleep-quality.png";
-import marketplace from "../assets/marketplace.png";
+import projects from "../data/projects";
 import { motion } from "motion/react"
+import { Link } from "react-router-dom";
+
+const MotionLink = motion.create(Link);
 
 
-const projects = [
-    {
-        id: "financial-advisor",
-        title: "AI Personal Financial Advisor",
-        image: financialAdvisor,
-        imageAlt: "AI Personal Financial Advisor interface with portfolio holdings and an investment advisory chat",
-        description: "IBM watsonX multi-agent system geared towards guiding users in making informed investment decisions.",
-    },
-    {
-        id: "sharkai",
-        title: "SharkAI Resume Reviewer",
-        image: sharkai,
-        imageAlt: "SharkAI Resume Reviewer interface with a resume upload form",
-        description: "Amazon Bedrock AI automatically extracts and analyzes resumes; can filter through keywords and provide suggestions under secure AWS cloud.",
-    },
-    {
-        id: "sjsu-marketplace",
-        title: "SJSU Marketplace",
-        image: marketplace,
-        imageAlt: "SJ-Bay student marketplace with product filters and listings for a pen, room rental, and textbook",
-        description: "Buyer and seller marketplace created by SJSU students for SJSU students.",
-    },
-    {
-        id: "sleep-quality",
-        title: "Sleep Quality Monitor",
-        image: sleepQuality,
-        imageAlt: "Sleep Quality Monitor dashboard with sleep scores, duration, efficiency, and heart rate charts",
-        description: "Monitors conditions important to quality of sleep. Data is combined with a Machine Learning model to optimize sleeping conditions.",
-    },
-];
 
 function Home() {
     return (
@@ -64,7 +34,7 @@ function Home() {
                 </h1>
 
                 <div className="education-cards">
-                <div className="overview-desc"> 
+                <motion.div className="overview-desc" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                     <div className="sjsu">
                        <p className="college-title">
                             Bachelor in Software Engineering
@@ -88,8 +58,8 @@ function Home() {
                                 <strong>Extracurriculars:</strong> Club Tennis, Vietnamese Student Association
                             </p>
                         </div>
-                </div>
-                <article className="overview-desc skillsbuild-card" aria-labelledby="skillsbuild-title">
+                </motion.div>
+                <motion.article className="overview-desc skillsbuild-card" aria-labelledby="skillsbuild-title" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                     <h2 id="skillsbuild-title" className="college-title">
                         IBM SkillsBuild AI Learning Lab
                     </h2>
@@ -100,7 +70,7 @@ function Home() {
                         <li>Introduction to Retrieval Augmented Generation</li>
                         <li>Unleashing the Power of AI Agents</li>
                     </ul>
-                </article>
+                </motion.article>
                 </div>
             </section>
 
@@ -111,7 +81,7 @@ function Home() {
 
                 <div className="featured-projects-grid">
                     {projects.map(project => (
-                        <article className="featured-project-card" key={project.id} aria-labelledby={`${project.id}-title`}>
+                        <MotionLink to="/projects" className="featured-project-card" key={project.id} aria-labelledby={`${project.id}-title`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                             {project.image ? (
                                 <img
                                     className="project-image"
@@ -128,7 +98,7 @@ function Home() {
                                 <h3 id={`${project.id}-title`}>{project.title}</h3>
                                 <p>{project.description}</p>
                             </div>
-                        </article>
+                        </MotionLink>
                     ))}
                 </div>
             </section>

@@ -7,6 +7,11 @@ import jambaLogo from "../assets/jamba.svg";
 const experiences = [
     {
         id: "ibm",
+        reference: {
+            name: "Lauren Turney",
+            url: "https://www.linkedin.com/in/lauren-turney-36a0a1245/",
+            linkLabel: "LinkedIn profile",
+        },
         title: "AI Extern",
         company: "IBM",
         dates: "Feb 2026 - May 2026",
@@ -17,6 +22,12 @@ const experiences = [
     },
     {
         id: "usta",
+        reference: {
+            name: "RL Scott",
+            phone: "408-813-1065",
+            url: "https://playtennis.usta.com/bayareawheelchairtennis",
+            linkLabel: "Bay Area Wheelchair Tennis",
+        },
         title: "Tournament Director & Volunteer",
         company: "(USTA) United States Tennis Association",
         type: "Part-time",
@@ -72,6 +83,20 @@ function Experience() {
                         <ul className="experience-skills" aria-label="Skills">
                             {experience.skills.map(skill => <li key={skill}>{skill}</li>)}
                         </ul>
+                        {experience.reference && (
+                            <section className="experience-description experience-reference" aria-labelledby={`${experience.id}-reference`}>
+                                <h3 id={`${experience.id}-reference`}>Reference</h3>
+                                <p>{experience.reference.name}</p>
+                                {experience.reference.phone && (
+                                    <p><a href={`tel:${experience.reference.phone.replace(/-/g, "")}`}>{experience.reference.phone}</a></p>
+                                )}
+                                <p>
+                                    <a href={experience.reference.url} target="_blank" rel="noopener noreferrer">
+                                        {experience.reference.linkLabel}
+                                    </a>
+                                </p>
+                            </section>
+                        )}
                     </article>
                 ))}
             </div>
