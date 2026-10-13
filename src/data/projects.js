@@ -4,6 +4,7 @@ import sleepQuality from "../assets/sleep-quality.png";
 import marketplace from "../assets/marketplace.png";
 import sharkaiDetails from "./sharkaiDetails";
 import marketplaceDetails from "./marketplaceDetails";
+import sleepQualityDetails from "./sleepQualityDetails";
 
 const projects = [
     {
@@ -50,11 +51,11 @@ const projects = [
     },
     {
         id: "sleep-quality",
+        detailsMarkdown: sleepQualityDetails,
         title: "Sleep Quality Monitor",
         image: sleepQuality,
         imageAlt: "Sleep Quality Monitor dashboard with sleep scores, duration, efficiency, and heart rate charts",
         description: "Monitors conditions important to quality of sleep. Data is combined with a Machine Learning model to optimize sleeping conditions.",
-        projectDescription: "Monitors conditions important to quality of sleep. Data is combined with a Machine Learning model to optimize sleeping conditions.",
     },
 ];
 

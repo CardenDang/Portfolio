@@ -24,7 +24,7 @@ const experiences = [
         id: "usta",
         reference: {
             name: "RL Scott",
-            phone: "408-813-1065",
+            email: "bayareawheelchairtennis@gmail.com",
             url: "https://playtennis.usta.com/bayareawheelchairtennis",
             linkLabel: "Bay Area Wheelchair Tennis",
         },
@@ -87,8 +87,8 @@ function Experience() {
                             <section className="experience-description experience-reference" aria-labelledby={`${experience.id}-reference`}>
                                 <h3 id={`${experience.id}-reference`}>Reference</h3>
                                 <p>{experience.reference.name}</p>
-                                {experience.reference.phone && (
-                                    <p><a href={`tel:${experience.reference.phone.replace(/-/g, "")}`}>{experience.reference.phone}</a></p>
+                                {experience.reference.email && (
+                                    <p><a href={`mailto:${experience.reference.email}`}>{experience.reference.email}</a></p>
                                 )}
                                 <p>
                                     <a href={experience.reference.url} target="_blank" rel="noopener noreferrer">
