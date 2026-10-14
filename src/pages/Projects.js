@@ -1,14 +1,24 @@
 import PageLayout from "../components/PageLayout";
 import projects from "../data/projects";
 import ProjectDetails from "../components/ProjectDetails";
+import { useLayoutEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function Projects() {
+    const { hash } = useLocation();
+
+    useLayoutEffect(() => {
+        if (hash) {
+            document.getElementById(hash.slice(1))?.scrollIntoView({ block: "start" });
+        }
+    }, [hash]);
+
     return (
         <PageLayout title="Projects">
             <p className="subtitle projects-subtitle">Take a more detailed look at my projects!</p>
             <div className="experience-list">
                 {projects.map(project => (
-                    <article className="experience-card" key={project.id} aria-labelledby={`${project.id}-title`}>
+                    <article id={project.id} className="experience-card" key={project.id} aria-labelledby={`${project.id}-title`}>
                         <h2 id={`${project.id}-title`}>{project.title}</h2>
                         <img className="project-preview" src={project.image} alt={project.imageAlt} loading="lazy" />
                         <section className="experience-description" aria-labelledby={`${project.id}-description`}>

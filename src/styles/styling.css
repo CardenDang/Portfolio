@@ -296,6 +296,10 @@
     font-size: 70px;
 }
 
+.featured-subtitle {
+    font-size: 28px;
+}
+
 .ibm-photo {
     width: min(90%, 700px);
     height: auto;

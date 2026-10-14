@@ -78,10 +78,11 @@ function Home() {
                 <h2 className="featured-title">
                     Featured Work
                 </h2>
+                <p className="subtitle featured-subtitle">Click to learn more</p>
 
                 <div className="featured-projects-grid">
                     {projects.map(project => (
-                        <MotionLink to="/projects" className="featured-project-card" key={project.id} aria-labelledby={`${project.id}-title`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                        <MotionLink to={`/projects#${project.id}`} className="featured-project-card" key={project.id} aria-labelledby={`${project.id}-title`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
                             {project.image ? (
                                 <img
                                     className="project-image"
