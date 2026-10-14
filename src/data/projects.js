@@ -32,6 +32,14 @@ const projects = [
         ],
     },
     {
+        id: "sleep-quality",
+        detailsMarkdown: sleepQualityDetails,
+        title: "Sleep Quality Monitor",
+        image: sleepQuality,
+        imageAlt: "Sleep Quality Monitor dashboard with sleep scores, duration, efficiency, and heart rate charts",
+        description: "Monitors conditions important to quality of sleep. Data is combined with a Machine Learning model to optimize sleeping conditions.",
+    },
+    {
         id: "sharkai",
         detailsMarkdown: sharkaiDetails,
         title: "SharkAI Resume Reviewer",
@@ -48,14 +56,6 @@ const projects = [
         imageAlt: "SJ-Bay student marketplace with product filters and listings for a pen, room rental, and textbook",
         description: "Buyer and seller marketplace created by SJSU students for SJSU students.",
         projectDescription: "Buyer and seller marketplace created by SJSU students for SJSU students.",
-    },
-    {
-        id: "sleep-quality",
-        detailsMarkdown: sleepQualityDetails,
-        title: "Sleep Quality Monitor",
-        image: sleepQuality,
-        imageAlt: "Sleep Quality Monitor dashboard with sleep scores, duration, efficiency, and heart rate charts",
-        description: "Monitors conditions important to quality of sleep. Data is combined with a Machine Learning model to optimize sleeping conditions.",
     },
 ];
 

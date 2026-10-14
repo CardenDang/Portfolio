@@ -18,7 +18,7 @@ export default function SiteHeader() {
                     </NavLink>
                     <a
                         className="resume-btn"
-                        href="https://drive.google.com/file/d/1YiVLqwxrqPLXyCWEL7XU_5X2phths53U/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1Bn8fXOkYiR2uol_2ZKHrb-h88OysfNbk/view?usp=sharing"
                         target="_blank"
                         rel="noreferrer"
                     >
