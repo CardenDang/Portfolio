@@ -567,6 +567,15 @@
     background-color: #eeeeff;
 }
 
+.project-enclosure {
+    margin: 24px 0 0;
+}
+
+.project-enclosure figcaption {
+    margin-top: 12px;
+    text-align: center;
+}
+
 .project-table-wrapper {
     margin-top: 24px;
     overflow-x: auto;

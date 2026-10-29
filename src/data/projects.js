@@ -1,6 +1,7 @@
 import financialAdvisor from "../assets/financial-advisor.png";
 import sharkai from "../assets/sharkai.png";
 import sleepQuality from "../assets/sleep-quality.png";
+import sleepQualityEnclosure from "../assets/sleep-quality-enclosure.jpg";
 import marketplace from "../assets/marketplace.png";
 import sharkaiDetails from "./sharkaiDetails";
 import marketplaceDetails from "./marketplaceDetails";
@@ -35,6 +36,7 @@ const projects = [
         id: "sleep-quality",
         detailsMarkdown: sleepQualityDetails,
         title: "Sleep Quality Monitor",
+        enclosureImage: sleepQualityEnclosure,
         image: sleepQuality,
         imageAlt: "Sleep Quality Monitor dashboard with sleep scores, duration, efficiency, and heart rate charts",
         description: "Monitors conditions important to quality of sleep. Data is combined with a Machine Learning model to optimize sleeping conditions.",

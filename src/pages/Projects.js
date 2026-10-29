@@ -76,6 +76,12 @@ function Projects() {
                                 </div>
                             )}
                         </section>
+                        {project.enclosureImage && (
+                            <figure className="project-enclosure">
+                                <img className="project-preview" src={project.enclosureImage} alt="Sleep Quality Monitor hardware in a black ventilated enclosure with sensor wiring visible" loading="lazy" />
+                                <figcaption>Sleep Quality Monitor enclosure</figcaption>
+                            </figure>
+                        )}
                     </article>
                 ))}
             </div>
